@@ -1,3 +1,15 @@
+function booklookup(){
+    
+
+this.search = (ispn) => {
+let value = this.amazonservice(ispn)
+return value
+
+
+}
+
+}
+
 test('tsst', () => {
     let test = "test"
 
