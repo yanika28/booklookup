@@ -1,5 +1,6 @@
-function booklookup(){
-    
+function booklookup(amazonservice){
+    this.amazonservice = amazonservice
+
 
 this.search = (ispn) => {
 let value = this.amazonservice(ispn)
@@ -26,7 +27,7 @@ test ('testbook-lookup',() => {
     let ispn = "aaaaasssssddd"
     let result = app.search(ispn)
 
-
+    expect(AmazonService).toHaveBeenCalled()
 
 
 })
