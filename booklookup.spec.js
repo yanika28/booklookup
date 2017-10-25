@@ -28,6 +28,15 @@ test ('testbook-lookup',() => {
     let result = app.search(ispn)
 
     expect(amazonservice).toHaveBeenCalled()
+    expect(amazonservice).toHaveBeenCalledWith(isbn)
+    expect(result).toEqual({ name: 'javascript-book', cover: 'image.com', ispn:'aaaaasssssddd'})
+    expect(result).toHaveProperty('bookname')
+    expect(result).toHaveProperty('cover')
+    expect(result).toHaveProperty('ispn')
+    expect(result.bookname).toBe("javascript-book")
+    expect(result.cover).toBe("image.com")
+    expect(result.ispn).toBe('aaaaasssssddd')
+    expect(result.ispn).toHaveLength(13)
 
 
 })
