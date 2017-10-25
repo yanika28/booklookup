@@ -27,7 +27,7 @@ test ('testbook-lookup',() => {
     let ispn = "aaaaasssssddd"
     let result = app.search(ispn)
 
-    expect(AmazonService).toHaveBeenCalled()
+    expect(amazonservice).toHaveBeenCalled()
 
 
 })
